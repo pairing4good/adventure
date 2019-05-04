@@ -1,5 +1,6 @@
 package com.pairgood.adventure;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;;
 
@@ -10,13 +11,18 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		
 		Random random = new Random();
+		
+		ArrayList<String> messages = new ArrayList<>();
+		messages.add("Hey there.");
+		messages.add("How are you today?");
+		messages.add("Nice weather we've been having!");
+		messages.add("This game is amazing! Oops, I just broke the fourth wall.");
 
 		print("What is your name?");
 		
 		String name = scanner.nextLine();
 		
 		Player player = new Player(name);
-		
 		
 		print("Welcome to Adventure" + name + "!");
 		
@@ -61,14 +67,14 @@ public class Main {
 				player.modifyMoney(+1);
 				player.modifyHeath(-1);
 			}else if(input == 3){
-				String[] messages = new String[] {
-					"Hey there.",
-					"How are you today?",
-					"Nice weather we've been having!",
-					"This game is amazing! Oops, I just broke the fourth wall."
-				};
 				
-				print(messages[random.nextInt(messages.length)]);
+				if(messages.size() > 0) {
+					String message = messages.get(random.nextInt(messages.size()));
+					print(message);
+				    messages.remove(message);
+				}else {
+					print("*Silence*");
+				}
 			}else {
 				print("Invalid item.");
 			}
