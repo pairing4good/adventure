@@ -63,8 +63,8 @@ public class Main {
 					"This game is amazing! Oops, I just broke the fourth wall."
 				};
 				
-				for(int i = 0; i < messages.length; i++) {
-					print(messages[i]);
+				for(String message : messages) {
+					System.out.println(message);
 				}
 			}else {
 				print("Invalid item.");
