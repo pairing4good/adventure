@@ -1,5 +1,6 @@
 package com.pairgood.adventure;
 
+import java.util.Random;
 import java.util.Scanner;;
 
 public class Main {
@@ -7,6 +8,8 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
+		
+		Random random = new Random();
 
 		print("What is your name?");
 		
@@ -63,9 +66,7 @@ public class Main {
 					"This game is amazing! Oops, I just broke the fourth wall."
 				};
 				
-				for(String message : messages) {
-					System.out.println(message);
-				}
+				print(messages[random.nextInt(messages.length)]);
 			}else {
 				print("Invalid item.");
 			}
