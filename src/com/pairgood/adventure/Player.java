@@ -6,8 +6,9 @@ public class Player extends Entity {
 	private double money;
 	
 	public Player(String name) {
+		super(10);
+		
 		this.name = name;
-		setHealth(10);
 		setMoney(19.99);
 	}
 
