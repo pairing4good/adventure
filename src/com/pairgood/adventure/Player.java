@@ -11,6 +11,11 @@ public class Player extends Entity {
 		this.name = name;
 		setMoney(19.99);
 	}
+	
+	@Override
+	public String getType() {
+		return "Player";
+	}
 
 	public String getName() {
 		return name;

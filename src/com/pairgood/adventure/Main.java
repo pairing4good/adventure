@@ -55,7 +55,7 @@ public class Main {
 					continue;
 				}
 				
-				Entity monster = new Monster(1);
+				Damageable monster = new Monster(1);
 				
 				print("You discovered treasure in the forest after a long day of hiking.");
 				player.modifyMoney(+1);

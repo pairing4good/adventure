@@ -1,6 +1,6 @@
 package com.pairgood.adventure;
 
-public class Entity {
+public abstract class Entity implements Damageable{
 
 	private int health;
 
@@ -8,15 +8,20 @@ public class Entity {
 		this.health = health;
 	}
 	
+	@Override
 	public int getHealth() {
 		return health;
 	}
 
+	@Override
 	public void setHealth(int health) {
 		this.health = health;
 	}
 	
+	@Override
 	public void modifyHeath(int health) {
 		this.health += health;
 	}
+	
+	public abstract String getType();
 }
