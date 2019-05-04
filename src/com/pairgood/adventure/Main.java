@@ -56,8 +56,15 @@ public class Main {
 				player.modifyMoney(+1);
 				player.modifyHeath(-1);
 			}else if(input == 3){
-				for(int i = 0; i< 5; i++) {
-					print("Someone say hi.");
+				String[] messages = new String[] {
+					"Hey there.",
+					"How are you today?",
+					"Nice weather we've been having!",
+					"This game is amazing! Oops, I just broke the fourth wall."
+				};
+				
+				for(int i = 0; i < messages.length; i++) {
+					print(messages[i]);
 				}
 			}else {
 				print("Invalid item.");
