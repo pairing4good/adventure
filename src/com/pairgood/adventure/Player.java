@@ -1,9 +1,8 @@
 package com.pairgood.adventure;
 
-public class Player {
+public class Player extends Entity {
 
 	private String name;
-	private int health;
 	private double money;
 	
 	public Player(String name) {
@@ -16,24 +15,12 @@ public class Player {
 		return name;
 	}
 
-	public int getHealth() {
-		return health;
-	}
-
-	public void setHealth(int health) {
-		this.health = health;
-	}
-
 	public double getMoney() {
 		return money;
 	}
 
 	public void setMoney(double money) {
 		this.money = money;
-	}
-	
-	public void modifyHeath(int health) {
-		this.health += health;
 	}
 	
 	public void modifyMoney(double money) {
